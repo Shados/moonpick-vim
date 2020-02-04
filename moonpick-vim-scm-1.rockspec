@@ -20,7 +20,7 @@ build = {
   type = "make",
 
   install_variables = {
-    LUA_LIBDIR="$(LUADIR)",
+    LUA_SHARE_DIR="$(LUADIR)",
     PREFIX="$(PREFIX)",
   },
 

@@ -14,7 +14,7 @@ LUA_FILES:=$(patsubst moon/%,lua/%,$(patsubst %.moon,%.lua,$(MOON_FILES)))
 
 PREFIX?=/usr/local
 BINDIR?=$(PREFIX)/bin
-LUA_SHARE_DIR?=$(PREFIX)/lib/lua/$(LUA_VERSION)
+LUA_SHARE_DIR?=$(PREFIX)/share/lua/$(LUA_VERSION)
 
 .PHONY: all install clean test watch
 
