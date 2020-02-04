@@ -1,0 +1,8 @@
+#!/usr/bin/env luajit
+local main
+main = require("moonpick-vim").main
+if #arg ~= 1 then
+  os.exit(1)
+end
+local config_search_path = arg[1]
+return main(config_search_path)
