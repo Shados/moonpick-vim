@@ -1,16 +1,17 @@
-local config_for
-config_for = require("moonpick.config").config_for
+local config_for, load_config_from
+do
+  local _obj_0 = require("moonpick.config")
+  config_for, load_config_from = _obj_0.config_for, _obj_0.load_config_from
+end
 local lint
 lint = require("moonpick").lint
 local convert_issue
 local main
-main = function(config_search_path)
-  local config_file = config_for(config_search_path)
+main = function(file_path)
+  local config_file = config_for(file_path)
   local config
   if config_file then
-    config = {
-      lint_config = config_file
-    }
+    config = load_config_from(config_file, file_path)
   else
     config = nil
   end

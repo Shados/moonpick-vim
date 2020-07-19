@@ -1,12 +1,12 @@
-import config_for from require "moonpick.config"
+import config_for, load_config_from from require "moonpick.config"
 import lint from require "moonpick"
 
 local convert_issue
 
-main = (config_search_path) ->
-  config_file = config_for config_search_path
+main = (file_path) ->
+  config_file = config_for file_path
   config = if config_file
-    { lint_config: config_file }
+    load_config_from config_file, file_path
   else
     nil
 

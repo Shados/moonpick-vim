@@ -4,5 +4,5 @@ main = require("moonpick-vim").main
 if #arg ~= 1 then
   os.exit(1)
 end
-local config_search_path = arg[1]
-return main(config_search_path)
+local file_path = arg[1]
+return main(file_path)

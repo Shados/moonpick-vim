@@ -20,7 +20,7 @@
  call ale#linter#Define('moon', {
  \   'name': 'moonpick',
  \   'executable': 'moonpick-vim',
- \   'command': 'moonpick-vim %s',
+ \   'command': '%e %s',
  \   'callback': 'ale_linters#moon#moonpick#Handle',
  \   'output_stream': 'stdout',
  \})
